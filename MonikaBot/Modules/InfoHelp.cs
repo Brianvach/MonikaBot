@@ -15,7 +15,7 @@ namespace MonikaBot.Modules
             EmbedBuilder build = new EmbedBuilder()
                 .WithTitle("Monika Bot Info")
                 .WithColor(Color.Green)
-                .WithImageUrl("")
+                .WithImageUrl("https://github.com/Brianvach/MonikaBot/commits/master/MonikaBot/Media/Monika.PNG")
                 .AddField("Help", "If you need help, please use the help command (<3help by default)")
                 .AddField("Author", $"Project create by Brian Vach using Discord.NET")
                 .AddField("GitHub", "https://github.com/Brianvach/MonikaBot")
