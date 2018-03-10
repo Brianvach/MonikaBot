@@ -48,7 +48,6 @@ namespace MonikaBot
 
             //event subscriptions
             _client.Log += Log;
-            _client.UserJoined += AnnounceUserJoined;
 
             await RegisterCommandsAsync();
 
@@ -62,13 +61,6 @@ namespace MonikaBot
         }
 
         
-
-        private async Task AnnounceUserJoined(SocketGuildUser user)
-        {
-            var guild = user.Guild;
-            var channel = guild.DefaultChannel;
-            await channel.SendMessageAsync($"Welcome, {user.Mention}! My name is Monika and I am president of the literature club.");
-        }
 
         private Task Log(LogMessage arg)
         {

@@ -10,11 +10,9 @@ namespace MonikaBot.Modules
     public class Ping : ModuleBase<SocketCommandContext>
     {
         [Command("ping")]
-        public async Task PingAsync(string name)
+        public async Task PingAsync()
         {
             await ReplyAsync($"{Context.User.Mention} sent {Context.Message.Content} in {Context.Guild.Name}!");
-
-            await ReplyAsync($"{name} is a noob");
         }
 
     }
