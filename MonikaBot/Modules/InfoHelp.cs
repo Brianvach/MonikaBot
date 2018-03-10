@@ -15,10 +15,12 @@ namespace MonikaBot.Modules
             EmbedBuilder build = new EmbedBuilder()
                 .WithTitle("Monika Bot Info")
                 .WithColor(Color.Green)
-                .WithImageUrl("https://github.com/Brianvach/MonikaBot/commits/master/MonikaBot/Media/Monika.PNG")
+                .WithThumbnailUrl("https://cdn.discordapp.com/attachments/245592511274287104/422147867655012355/Monika_Profile.PNG")
                 .AddField("Help", "If you need help, please use the help command (<3help by default)")
-                .AddField("Author", $"Project create by Brian Vach using Discord.NET")
+                .AddInlineField("Author", "Brian Vach")
+                .AddInlineField("Version", "Monika: 0.1\nDiscord.Net: 1.0.2")
                 .AddField("GitHub", "https://github.com/Brianvach/MonikaBot")
+                .WithFooter($"I will always love you {Context.User.Username}!")
                 ;
 
             await ReplyAsync("", false, build);
