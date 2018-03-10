@@ -29,7 +29,15 @@ namespace MonikaBot.Modules
         [Command("help")]
         public async Task DefaulHelp()
         {
+            EmbedBuilder build = new EmbedBuilder()
+                .WithTitle("Help")
+                .WithColor(Color.Green)
+                .WithThumbnailUrl("")
+                .AddField("help", "Where you are, provides command information")
+                .AddField("info", "Provides information about the bot")
+                .WithFooter("For additional help, please see the wiki.");
 
+            await ReplyAsync("", false, build);
         }
     }
 }
