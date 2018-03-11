@@ -17,16 +17,34 @@ namespace MonikaBot.Modules
         public async Task KickAsync(IGuildUser user, [Remainder] string reason = "You will never be good enough for him")
         {
             await ReplyAsync($"discord.remove('{user.Username}.chr')");
+            EmbedBuilder build = new EmbedBuilder()
+                .WithTitle("Removed")
+                .WithColor(Color.Red)
+                .WithThumbnailUrl("https://cdn.discordapp.com/attachments/422194940471148566/422460677031067649/Monika_Sad.png")
+                .WithDescription("You were kicked from the server")
+                .AddField("Server", Context.Guild.Name)
+                .AddField("Reason", reason)
+                ;
+            await user.SendMessageAsync("", false, build);
             await user.KickAsync(reason);
         }
 
-        [Command("delete")]
+        [Command("ban")]
         [RequireUserPermission(Discord.GuildPermission.BanMembers)]
         [RequireBotPermission(Discord.GuildPermission.BanMembers)]
         public async Task BanAsync(IGuildUser user, [Remainder] string reason = "You will never be good enough for him")
         {
             await ReplyAsync($"discord.erase('{user.Username}.chr')");
-            await Context.Guild.AddBanAsync(user, 7, reason);
+            EmbedBuilder build = new EmbedBuilder()
+                .WithTitle("Deleted")
+                .WithColor(Color.Red)
+                .WithThumbnailUrl("https://cdn.discordapp.com/attachments/422194940471148566/422460677031067649/Monika_Sad.png")
+                .WithDescription("You were banned from the server")
+                .AddField("Server", Context.Guild.Name)
+                .AddField("Reason", reason)
+                ;
+            await user.SendMessageAsync("", false, build);
+            await Context.Guild.AddBanAsync(user, 0, reason);
         }
 
         [Command("restore")]
