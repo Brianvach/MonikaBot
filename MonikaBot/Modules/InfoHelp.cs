@@ -30,12 +30,11 @@ namespace MonikaBot.Modules
         public async Task DefaulHelp()
         {
             EmbedBuilder build = new EmbedBuilder()
-                .WithTitle("Help")
+                .WithTitle("I'll do whatever I can to help you!")
                 .WithColor(Color.Green)
-                .WithThumbnailUrl("")
-                .AddField("help", "Where you are, provides command information")
-                .AddField("info", "Provides information about the bot")
-                .WithFooter("For additional help, please see the wiki.");
+                .WithThumbnailUrl("https://cdn.discordapp.com/attachments/422194940471148566/422213724368142357/Monika_Quizicle.png")
+                .AddField("Commands", "See a full list of commands on the [wiki](https://github.com/Brianvach/MonikaBot/wiki/Commands)")
+                .WithFooter("For additional help, please see the [wiki](https://github.com/Brianvach/MonikaBot/wiki).");
 
             await ReplyAsync("", false, build);
         }
