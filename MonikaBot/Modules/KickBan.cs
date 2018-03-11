@@ -20,7 +20,7 @@ namespace MonikaBot.Modules
             await user.KickAsync(reason);
         }
 
-        [Command("erase")]
+        [Command("delete")]
         [RequireUserPermission(Discord.GuildPermission.BanMembers)]
         [RequireBotPermission(Discord.GuildPermission.BanMembers)]
         public async Task BanAsync(IGuildUser user, [Remainder] string reason = "You will never be good enough for him")

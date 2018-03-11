@@ -17,7 +17,7 @@ namespace MonikaBot.Modules
                 .WithColor(Color.Green)
                 .WithThumbnailUrl("https://cdn.discordapp.com/attachments/422194940471148566/422195002307772417/Monika_Profile.png")
                 .AddField("Help", "If you need help, please use the help command (<3help by default)")
-                .AddInlineField("Author", "Brian Vach")
+                .AddInlineField("Author", "Brian Vach\nVoytrekk#5866")
                 .AddInlineField("Version", "Monika: 0.1\nDiscord.Net: 1.0.2")
                 .AddField("GitHub", "https://github.com/Brianvach/MonikaBot")
                 .WithFooter($"I will always love you {Context.User.Username}!")
