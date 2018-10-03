@@ -54,6 +54,8 @@ namespace MonikaBot
             
             await _client.LoginAsync(Discord.TokenType.Bot, BotToken);
 
+            await _client.SetGameAsync("with your hearts. <3help");
+
             await _client.StartAsync();
 
             await Task.Delay(-1);
